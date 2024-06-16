@@ -37,6 +37,9 @@ header {
     z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px #3a3a3a;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
 }
 header a {
   text-decoration: none;
@@ -71,14 +74,48 @@ nav {
   left: 0%;
   padding: 0 1rem;
   box-shadow: 0 2px 2px #3a3a3a;
+  display: none;
+  top: 100%;
 }
+
+/*NAV TOGGLE*/
+#nav-toggle:checked~nav {
+  display: block;
+}
+#nav-toggle {
+  display: none;
+}
+
+.nav-toggle-label {
+  font-style: 2rem;
+}
+
 /*Main content*/
 main {
     background-color: lightblue;
     /*Make main element take up any surplus space to push footer down*/
     flex: 1 0 auto;
+    margin-top: 47px;
 }
 /*Footer*/
 footer {
     background-color: orange;
+}
+/*Media query for 768px*/
+@media screen and (min-width: 768px) {
+  /*Header*/
+  nav {
+    display: block;
+    position: relative;
+    box-shadow: none;
+    width: fit-content;
+    padding-right: 1rem;
+  }
+  #menu {
+    display: flex;
+  }
+  #menu > li {
+    padding-left: 1rem;
+  }
+  .nav-toggle-label {display: none;}
 }
