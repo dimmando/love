@@ -229,8 +229,24 @@ hr {
   color: #3a3a3a;
 }
 
+/*Media query: large or landscape phones 576px and up*/
+@media screen and (min-width: 576px) {
+
+  #photos {
+    column-count: 2;
+    column-gap: 0;
+}
+
+}
+
 /*Media query for 768px*/
 @media screen and (min-width: 768px) {
+
+  /*Gallery*/
+  #photos {
+    column-count: 3;
+    column-gap: 0;
+}
 
   /*Header*/
   nav {
@@ -264,6 +280,8 @@ hr {
     /*Push main content down due to higher screen size*/
     margin-top: 79px;
   }
+
+
 }
 
 /*Reasons section*/
@@ -282,12 +300,21 @@ width: 75%;
   align-self: flex-end;
 }
 
-/*Media query for Laptops 768px and more*/
+
+
+/*Media query for Laptops 992px and more*/
 @media screen and (min-width: 992px) {
   #menu a:hover {
     border-bottom: 1px solid #3a3a3a;
   }
+ /*Gallery*/
+ #photos {
+  column-count: 4;
+  column-gap: 0;
 }
+
+}
+
 
 @media screen and (min-width: 1200px) {    
   /* Reasons section */
