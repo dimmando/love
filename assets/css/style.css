@@ -289,7 +289,7 @@ hr {
     max-width: 400px;
     position: absolute;
     left: 10%;
-    top: 150px;
+    top: 100px;
   }
   .text-input:hover {
     border-color: #f16c6b;
